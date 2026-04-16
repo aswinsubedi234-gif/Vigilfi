@@ -1,0 +1,196 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  animation: fadeInScale 0.6s var(--ease-out) both;
+}
+
+/* ─── The Card ──────────────────────────────────────────────────── */
+.card {
+  width: 380px;
+  max-width: 100%;
+  background: linear-gradient(160deg, #13131f 0%, #0d0d16 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, var(--result-color, var(--accent-glow)), transparent 60%);
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-8);
+  position: relative;
+  z-index: 1;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: var(--text-sm);
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+}
+
+.testName {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.scoreSection {
+  text-align: center;
+  margin-bottom: var(--space-8);
+  position: relative;
+  z-index: 1;
+}
+
+.scoreValue {
+  font-size: var(--text-7xl);
+  font-weight: 900;
+  font-family: var(--font-mono);
+  line-height: 1;
+  color: var(--text);
+  letter-spacing: -2px;
+}
+
+.scoreUnit {
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-left: var(--space-2);
+}
+
+.scoreSubtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-2);
+}
+
+.percentileSection {
+  margin-bottom: var(--space-6);
+  position: relative;
+  z-index: 1;
+}
+
+.percentileBar {
+  height: 8px;
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-3);
+}
+
+.percentileFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 1s var(--ease-out);
+  box-shadow: 0 0 12px var(--result-color, var(--accent-glow));
+}
+
+.percentileInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.percentileLabel {
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.percentileValue {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.cardFooter {
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--text-dim);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+  z-index: 1;
+}
+
+.cardFooter strong {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* ─── Action Buttons ────────────────────────────────────────────── */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  transition: all 0.2s var(--ease-out);
+  cursor: pointer;
+}
+
+.actionBtn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  color: var(--text);
+}
+
+.actionPrimary {
+  background: linear-gradient(135deg, var(--accent), #5a4bd4);
+  border-color: transparent;
+  color: white;
+}
+
+.actionPrimary:hover {
+  background: linear-gradient(135deg, #7c6ef0, var(--accent));
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+@media (max-width: 440px) {
+  .card {
+    width: 100%;
+    padding: var(--space-6);
+  }
+
+  .scoreValue {
+    font-size: var(--text-5xl);
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .actionBtn {
+    justify-content: center;
+  }
+}

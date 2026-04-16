@@ -1,0 +1,230 @@
+.container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6) var(--space-20);
+}
+
+.header {
+  margin-bottom: var(--space-10);
+  animation: fadeInUp 0.5s var(--ease-out) both;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: var(--space-4);
+  transition: color 0.2s;
+}
+.backLink:hover { color: var(--accent-light); }
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+}
+
+/* ─── Stats Grid ──────────────────────────────────────────── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-10);
+  animation: fadeInUp 0.5s var(--ease-out) 0.1s both;
+}
+
+.statCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  text-align: center;
+  transition: all 0.3s var(--ease-out);
+}
+.statCard:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+}
+
+.statIcon {
+  color: var(--accent-light);
+  margin-bottom: var(--space-3);
+  display: flex;
+  justify-content: center;
+}
+.fireStatIcon { color: #f39c12; filter: drop-shadow(0 0 6px rgba(243,156,18,0.4)); }
+
+.statValue {
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  font-family: var(--font-mono);
+  margin-bottom: var(--space-1);
+}
+
+.statLabel {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* ─── Sections ────────────────────────────────────────────── */
+.section {
+  margin-bottom: var(--space-12);
+  animation: fadeInUp 0.5s var(--ease-out) 0.15s both;
+}
+
+.sectionTitle {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  margin-bottom: var(--space-5);
+}
+
+/* ─── Best Scores ─────────────────────────────────────────── */
+.bestGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.bestCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: all 0.25s var(--ease-out);
+}
+.bestCard:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.bestIcon {
+  font-size: 1.8rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.bestInfo { flex: 1; }
+.bestName { font-size: var(--text-sm); font-weight: 600; color: var(--text); margin-bottom: 2px; }
+.bestScore { display: flex; align-items: baseline; gap: var(--space-3); }
+.bestValue { font-size: var(--text-lg); font-weight: 800; font-family: var(--font-mono); color: var(--accent-light); }
+.bestMeta { font-size: var(--text-xs); color: var(--text-muted); font-family: var(--font-mono); }
+.bestEmpty { font-size: var(--text-sm); color: var(--text-dim); font-style: italic; }
+
+.sparkline { flex-shrink: 0; opacity: 0.6; }
+
+/* ─── Achievements ────────────────────────────────────────── */
+.achievementsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  transition: all 0.2s var(--ease-out);
+}
+
+.badgeUnlocked {
+  background: rgba(108, 92, 231, 0.05);
+  border-color: rgba(108, 92, 231, 0.2);
+}
+.badgeUnlocked:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+
+.badgeLocked {
+  background: rgba(255,255,255,0.01);
+  opacity: 0.45;
+}
+
+.badgeIcon { font-size: 1.6rem; flex-shrink: 0; }
+.badgeName { font-size: var(--text-sm); font-weight: 700; margin-bottom: 1px; }
+.badgeDesc { font-size: var(--text-xs); color: var(--text-muted); line-height: 1.4; }
+
+/* ─── History ─────────────────────────────────────────────── */
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.historyItem {
+  display: grid;
+  grid-template-columns: 36px 1fr auto auto auto;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(255,255,255,0.015);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+}
+
+.historyIcon { font-size: 1.2rem; text-align: center; }
+.historyName { color: var(--text); font-weight: 500; }
+.historyScore { font-family: var(--font-mono); font-weight: 700; color: var(--accent-light); }
+.historyPercentile { font-size: var(--text-xs); color: var(--text-muted); font-family: var(--font-mono); }
+.historyDate { font-size: var(--text-xs); color: var(--text-dim); font-family: var(--font-mono); text-align: right; }
+
+/* ─── Empty State ─────────────────────────────────────────── */
+.emptyState {
+  text-align: center;
+  padding: var(--space-20) var(--space-6);
+  animation: fadeInUp 0.5s var(--ease-out) both;
+}
+.emptyIcon { font-size: 4rem; margin-bottom: var(--space-4); animation: float 3s ease-in-out infinite; }
+.emptyState h3 { font-size: var(--text-2xl); font-weight: 800; margin-bottom: var(--space-2); }
+.emptyState p { color: var(--text-secondary); margin-bottom: var(--space-6); }
+.emptyBtn {
+  display: inline-flex;
+  padding: var(--space-3) var(--space-6);
+  background: linear-gradient(135deg, var(--accent), #5a4bd4);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s var(--ease-out);
+}
+.emptyBtn:hover { box-shadow: 0 0 25px var(--accent-glow); transform: translateY(-2px); }
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .bestGrid { grid-template-columns: 1fr; }
+  .achievementsGrid { grid-template-columns: repeat(2, 1fr); }
+  .historyItem { grid-template-columns: 30px 1fr auto auto; }
+  .historyDate { display: none; }
+}
+
+@media (max-width: 480px) {
+  .achievementsGrid { grid-template-columns: 1fr; }
+  .historyItem { grid-template-columns: 30px 1fr auto; }
+  .historyPercentile { display: none; }
+}

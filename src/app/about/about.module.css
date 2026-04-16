@@ -1,0 +1,107 @@
+.container {
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  padding: var(--space-20) var(--space-6) var(--space-12);
+  animation: fadeInUp 0.6s var(--ease-out) both;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 var(--space-6) var(--space-20);
+}
+
+.section {
+  margin-bottom: var(--space-12);
+  animation: fadeInUp 0.6s var(--ease-out) both;
+}
+
+.section h2 {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+  color: var(--text);
+}
+
+.section p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-4);
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+.privacyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.privacyItem {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: all 0.3s var(--ease-out);
+}
+
+.privacyItem:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.privacyIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.privacyItem h3 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.privacyItem p {
+  font-size: var(--text-sm) !important;
+  margin-bottom: 0 !important;
+}
+
+.link {
+  color: var(--accent-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--cyan);
+}
+
+@media (max-width: 640px) {
+  .privacyGrid {
+    grid-template-columns: 1fr;
+  }
+}
