@@ -11,6 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'color-perception',
     'sequence-memory',
     'ai-detect',
+    'spatial-reasoning',
+    'chimp-test',
   ];
 
   const blogSlugs = [
@@ -20,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'brain-age-what-it-means',
     'color-perception-human-eye',
     'ai-vs-human-text-detection',
+    'chimp-capacity-and-visual-memory',
+    'spatial-reasoning-and-stem-aptitude',
   ];
 
   const testPages = tests.map((slug) => ({
