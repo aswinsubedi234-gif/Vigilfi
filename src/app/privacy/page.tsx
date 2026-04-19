@@ -5,6 +5,9 @@ import styles from './privacy.module.css';
 export const metadata: Metadata = {
   title: 'Privacy Policy — VIGILFI',
   description: 'VIGILFI privacy policy. We don\'t collect, store, or sell your personal data. All tests run entirely in your browser.',
+  alternates: {
+    canonical: '/privacy',
+  },
 };
 
 export default function PrivacyPage() {

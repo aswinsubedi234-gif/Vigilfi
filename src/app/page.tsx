@@ -6,6 +6,7 @@ import { Flame, Trophy, Calendar, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import NeuralBackground from '@/components/NeuralBackground';
 import TestGrid from '@/components/TestGrid';
+import AdSlot from '@/components/AdSlot';
 import { TESTS } from '@/lib/tests';
 import { getStreak, getTotalTestsTaken, getAchievements, getDailyChallenge, hasCompletedDailyChallenge } from '@/lib/storage';
 import styles from './page.module.css';
@@ -163,6 +164,8 @@ export default function Home() {
           </div>
         </section>
 
+        <AdSlot format="horizontal" />
+
         {/* Footer */}
         <footer className={styles.footer}>
           <div className={styles.footerInner}>
@@ -171,12 +174,12 @@ export default function Home() {
               <p>Free brain tests for everyone.</p>
             </div>
             <div className={styles.footerLinks}>
-              <a href="/#tests">Tests</a>
-              <a href="/blog">Blog</a>
-              <a href="/dashboard">Dashboard</a>
-              <a href="/about">About</a>
-              <a href="/privacy">Privacy</a>
-              <a href="/terms">Terms</a>
+              <Link href="/#tests">Tests</Link>
+              <Link href="/blog">Blog</Link>
+              <Link href="/dashboard">Dashboard</Link>
+              <Link href="/about">About</Link>
+              <Link href="/privacy">Privacy</Link>
+              <Link href="/terms">Terms</Link>
             </div>
             <p className={styles.footerCopy}>&copy; {new Date().getFullYear()} VIGILFI. All rights reserved.</p>
           </div>

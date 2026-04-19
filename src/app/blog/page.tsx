@@ -1,11 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
+import AdSlot from '@/components/AdSlot';
 import styles from './blog.module.css';
 
 export const metadata: Metadata = {
   title: 'Blog — Brain Science & Cognitive Tips — VIGILFI',
-  description: 'Articles about brain science, cognitive testing, reaction time improvement, memory tips, and typing speed training. Free brain training resources.',
+  description: 'Expert articles on brain science, cognitive performance, reaction time, memory improvement, and typing speed. Free brain training tips from VIGILFI.',
+  alternates: {
+    canonical: '/blog',
+  },
 };
 
 interface BlogPost {
@@ -189,6 +193,8 @@ export default function BlogPage() {
             </Link>
           ))}
         </div>
+
+        <AdSlot format="horizontal" />
       </main>
     </>
   );

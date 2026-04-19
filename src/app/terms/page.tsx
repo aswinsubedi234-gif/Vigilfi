@@ -5,6 +5,9 @@ import styles from './terms.module.css';
 export const metadata: Metadata = {
   title: 'Terms of Service — VIGILFI',
   description: 'VIGILFI terms of service. Free brain testing platform terms and conditions.',
+  alternates: {
+    canonical: '/terms',
+  },
 };
 
 export default function TermsPage() {

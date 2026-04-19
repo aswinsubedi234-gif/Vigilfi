@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ToastProvider } from "@/components/Toast";
+import CookieConsent from "@/components/CookieConsent";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
@@ -61,6 +62,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Replace ca-pub-XXXXXXXXXX with your actual AdSense publisher ID */}
+        <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXX" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -70,6 +73,7 @@ export default function RootLayout({
         <ToastProvider>
           {children}
         </ToastProvider>
+        <CookieConsent />
         <Analytics />
       </body>
     </html>

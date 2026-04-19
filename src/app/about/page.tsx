@@ -5,6 +5,9 @@ import styles from './about.module.css';
 export const metadata: Metadata = {
   title: 'About VIGILFI — Free Brain Testing Platform',
   description: 'VIGILFI is a free online brain testing platform. Test your reaction time, typing speed, memory, and cognitive abilities. No sign-up required.',
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 export default function AboutPage() {

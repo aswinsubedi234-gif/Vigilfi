@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import AdSlot from '@/components/AdSlot';
 import styles from './article.module.css';
 
 // Blog article content database
@@ -1148,6 +1149,8 @@ export default async function BlogArticlePage({ params }: Props) {
           </header>
 
           <div className={styles.body} dangerouslySetInnerHTML={{ __html: markdownToHtml(article.content) }} />
+
+          <AdSlot format="horizontal" />
 
           <footer className={styles.footer}>
             <div className={styles.cta}>
