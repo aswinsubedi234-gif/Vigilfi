@@ -16,6 +16,13 @@ const TEXTS = [
   "Mountains rise above the clouds casting shadows across the valley below where rivers carve their ancient paths through stone.",
   "Innovation starts with curiosity and grows through persistent effort until an idea becomes something the world cannot ignore.",
   "Every great achievement begins with a single step forward driven by courage and the refusal to accept the comfortable path.",
+  "The ocean waves crashed against the rocky shore as seagulls circled overhead searching for their next meal in the fading light.",
+  "Scientists discovered that the human brain creates new neural connections every single day regardless of age or background.",
+  "Coffee shops around the world serve as gathering places where ideas are born and friendships are strengthened over warm drinks.",
+  "The ancient library held thousands of manuscripts each containing knowledge passed down through countless generations of scholars.",
+  "Technology continues to reshape how we communicate learn and work together across vast distances in ways previously unimaginable.",
+  "A well designed keyboard can make typing feel effortless as your fingers dance across the keys with rhythm and precision.",
+  "Practice does not make perfect but it does make permanent so always focus on building the right habits from the very start.",
 ];
 
 type GameState = 'idle' | 'playing' | 'done';

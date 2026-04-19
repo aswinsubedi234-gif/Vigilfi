@@ -59,6 +59,8 @@ export default function NumberMemoryTest() {
     } else {
       playError();
       setState('wrong');
+      // Delay before showing final result so user sees the mistake
+      setTimeout(() => setState('done'), 1200);
     }
   }, [userInput, number]);
 
@@ -83,7 +85,7 @@ export default function NumberMemoryTest() {
 
   const score = level + 2 - (state === 'wrong' ? 1 : 0); // digits remembered
 
-  if (state === 'done' || (state === 'wrong')) {
+  if (state === 'done') {
     return (
       <main className={styles.container}>
         <div className={styles.resultPage}>

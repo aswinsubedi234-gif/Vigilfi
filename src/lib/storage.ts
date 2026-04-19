@@ -133,7 +133,7 @@ export function getStreak(): StreakData {
 
 export const ACHIEVEMENT_DEFS: Omit<Achievement, 'unlocked' | 'unlockedAt'>[] = [
   { id: 'first-test', name: 'First Steps', description: 'Complete your first test', icon: '🎯' },
-  { id: 'all-tests', name: 'Renaissance Mind', description: 'Complete all 7 tests', icon: '🧠' },
+  { id: 'all-tests', name: 'Renaissance Mind', description: 'Complete all 9 tests', icon: '🧠' },
   { id: 'speed-demon', name: 'Speed Demon', description: 'Score under 200ms in Reaction Time', icon: '⚡' },
   { id: 'lightning', name: 'Lightning Reflexes', description: 'Score under 150ms in Reaction Time', icon: '🌩️' },
   { id: 'fast-typer', name: 'Keyboard Warrior', description: 'Type over 60 WPM', icon: '⌨️' },
@@ -189,7 +189,7 @@ export function checkAchievements(testId: string, score: number): string[] {
   if (totalTests >= 1 && unlockAchievement('first-test')) newlyUnlocked.push('first-test');
 
   // All tests
-  if (uniqueTests >= 7 && unlockAchievement('all-tests')) newlyUnlocked.push('all-tests');
+  if (uniqueTests >= 9 && unlockAchievement('all-tests')) newlyUnlocked.push('all-tests');
 
   // Count-based
   if (totalTests >= 10 && unlockAchievement('ten-tests')) newlyUnlocked.push('ten-tests');

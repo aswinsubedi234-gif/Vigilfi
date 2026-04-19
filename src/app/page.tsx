@@ -55,7 +55,7 @@ export default function Home() {
             {/* Live Stats */}
             <div className={styles.heroStats}>
               <div className={styles.heroStat}>
-                <span className={styles.heroStatNum}>7</span>
+                <span className={styles.heroStatNum}>9</span>
                 <span className={styles.heroStatLabel}>Tests</span>
               </div>
               <div className={styles.heroStatDivider} />

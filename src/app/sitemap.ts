@@ -16,14 +16,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogSlugs = [
+    // Original 7
     'how-to-improve-reaction-time',
     'average-typing-speed-by-age',
     'what-is-working-memory',
     'brain-age-what-it-means',
     'color-perception-human-eye',
-    'ai-vs-human-text-detection',
     'chimp-capacity-and-visual-memory',
     'spatial-reasoning-and-stem-aptitude',
+    // New 10
+    'how-to-type-faster',
+    'what-is-a-good-reaction-time',
+    'brain-games-that-actually-work',
+    'how-to-improve-memory',
+    'ai-vs-human-writing',
+    'average-reaction-time-gamers',
+    'neuroplasticity-explained',
+    'color-blindness-test-guide',
+    'sequence-memory-and-iq',
+    'digital-cognitive-assessment',
   ];
 
   const testPages = tests.map((slug) => ({
@@ -38,6 +49,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
+  }));
+
+  const challengePages = tests.map((slug) => ({
+    url: `${BASE_URL}/challenge/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
   }));
 
   return [
@@ -55,6 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     ...blogPages,
+    ...challengePages,
     {
       url: `${BASE_URL}/about`,
       lastModified: new Date(),
@@ -75,3 +94,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 }
+
